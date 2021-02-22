@@ -1,0 +1,6 @@
+[user]
+	name = Floyd Hightower
+	email = floyd.hightower27@gmail.com
+
+[includeIf "gitdir:~/private/"]
+    path = ~/private/.gitconfig
