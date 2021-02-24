@@ -1,6 +1,7 @@
 alias sl='subl .'
 alias code="cd ~/code; ls;"
 alias pip='pip3'
+alias cl='clear'
 
 # sublime aliases
 alias cdsnip='cd /Users/floyd/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/snippets; ls;'
@@ -16,6 +17,7 @@ alias pepython='pipenv run python'
 alias black='pipenv run black .'
 alias pev='cd ~/.local/share/virtualenvs'
 alias gi='git init -b main'
+
 
 # docker-compose aliases
 alias dcrp="docker-compose run --rm pytest"
