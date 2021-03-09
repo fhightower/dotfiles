@@ -1,3 +1,0 @@
-function sl
-  subl .
-end
