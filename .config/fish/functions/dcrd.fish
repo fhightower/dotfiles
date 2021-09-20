@@ -1,3 +1,3 @@
 function dcrd
-  docker-compose run --rm dev
+  docker-compose run --service-ports --rm dev
 end

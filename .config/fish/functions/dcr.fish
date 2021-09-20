@@ -1,3 +1,3 @@
 function dcr
-  docker-compose run --rm $argv
+  docker-compose run --service-ports --rm $argv
 end
