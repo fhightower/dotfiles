@@ -2,5 +2,5 @@
 
 cd ~;
 git clone --depth=1 git@github.com:fhightower/dotfiles.git;
-cp -r dotfiles/regularly_updated/* ~;
+cp -r dotfiles/regularly_updated/ ~;
 rm -rf dotfiles/
