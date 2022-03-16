@@ -3,4 +3,7 @@
 	email = floyd.hightower27@gmail.com
 
 [includeIf "gitdir:~/private/"]
-    path = ~/private/.gitconfig
+	path = ~/private/.gitconfig
+
+[init]
+	defaultBranch = main
