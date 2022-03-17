@@ -14,13 +14,16 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
 " open Nerdtree automatically (https://stackoverflow.com/a/36882670/6804636)
-au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
+" and focus on the file pane
+au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | execute ':wincmd l'
 
 let mapleader = ' '
 
+" create mappings to open nerdtree
+nnoremap <leader>n <cmd>NERDTreeToggle<cr>
 " create mappings to make it easy to switch to and from Nerdtree window
-map <leader>a :wincmd h<CR>
-map <leader>; :wincmd l<CR>
+nnoremap <leader>a :wincmd h<cr>
+nnoremap <leader>; :wincmd l<cr>
 
 " find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
