@@ -15,7 +15,7 @@ call plug#end()
 
 " open Nerdtree automatically (https://stackoverflow.com/a/36882670/6804636)
 " and focus on the file pane
-au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | execute ':wincmd l'
+" au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0] | execute ':wincmd l'
 
 let mapleader = ' '
 
