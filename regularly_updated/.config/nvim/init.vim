@@ -31,3 +31,6 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" MISC MAPPINGS TO MAKE LIFE EASIER
+" add command to open previous file
+nnoremap <leader>b <cmd>e#<cr>
