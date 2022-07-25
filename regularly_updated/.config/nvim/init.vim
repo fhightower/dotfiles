@@ -29,9 +29,12 @@ let mapleader = ' '
 
 " Create mappings to open nerdtree
 nnoremap <leader>n <cmd>NERDTreeToggle<cr>
-" Create mappings to make it easy to switch to and from Nerdtree window
-nnoremap <leader>a :wincmd h<cr>
-nnoremap <leader>; :wincmd l<cr>
+
+" Create mappings for navigating windows
+nnoremap <leader>wh :wincmd h<cr>
+nnoremap <leader>wj :wincmd j<cr>
+nnoremap <leader>wk :wincmd k<cr>
+nnoremap <leader>wl :wincmd l<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -42,6 +45,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " MISC MAPPINGS TO MAKE LIFE EASIER... most (except really common ones) are prefixed with `m` to set them apart
 " Add command to open previous file
 nnoremap <leader>b <cmd>e#<cr>
+
 " Add command to turn off line numbering
 " credit: https://stackoverflow.com/questions/32306604/how-to-turn-off-vim-relativenumber-setting
 function! NumberToggle()
@@ -52,4 +56,11 @@ function! NumberToggle()
   endif
 endfunc
 nnoremap <leader>mn <cmd>:call NumberToggle()<cr>
+
+augroup CUSTOM_STUFF
+	" Removes all listeners in this group and re-attaches them
+	autocmd!
+	" Remove trailing whitespace
+	autocmd BufWritePre * : execute ':%s/\s\+$//e'
+augroup END
 
