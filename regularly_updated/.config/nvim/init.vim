@@ -1,6 +1,17 @@
-" Nice menu when typing `:find *.py`
-set wildmode=longest,list,full
-set wildmenu
+set exrc " use local neovim configs if present
+set noerrorbells " goes without saying...
+
+set tabstop=4 softtabstop=4 " default indentation is four spaces w/ tabs being converted to 4 spaces as well
+set shiftwidth=4 " sets number of spaces used for each indent
+set smartindent
+
+set ignorecase " ignore case when searching...
+set smartcase " ... unless search has upper-case char. in it
+
+set scrolloff=11 " scroll once I am 11 chars. from the end of the file
+
+set wildmode=list " list command line completion options
+set wildmenu " command-line completion shows a list of matches
 
 call plug#begin('~/.config/nvim/plugged')
 
