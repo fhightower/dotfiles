@@ -13,6 +13,13 @@ set scrolloff=11 " scroll once I am 11 chars. from the end of the file
 set wildmode=list " list command line completion options
 set wildmenu " command-line completion shows a list of matches
 
+" spell languages
+set spelllang=en_us
+" show nine spell checking candidates at most
+set spellsuggest=best,9
+" treat components of a camelCasedWord as different words
+set spelloptions=camel
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/vim-plug'
