@@ -56,6 +56,8 @@ nnoremap <leader>b <cmd>e#<cr>
 nnoremap <esc> :noh<return><esc>
 " Indent the entire file and then return to the line from which this command was called
 nnoremap <leader>mi gg<cr>=G<cr>``<cr>
+" Toggle spelling
+nnoremap <leader>ms <cmd>:set spell!<cr>
 
 " Add command to turn off line numbering
 " credit: https://stackoverflow.com/questions/32306604/how-to-turn-off-vim-relativenumber-setting
