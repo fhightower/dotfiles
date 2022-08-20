@@ -12,9 +12,6 @@ set updatetime=300
 set ignorecase " ignore case when searching...
 set smartcase " ... unless search has upper-case char. in it
 
-" Show the side column for diagnostics
-set signcolumn=yes
-
 set scrolloff=11 " scroll once I am 11 chars. from the end of the file
 
 set wildmode=list " list command line completion options
