@@ -4,6 +4,7 @@ set noerrorbells " goes without saying...
 set tabstop=4 softtabstop=4 " default indentation is four spaces w/ tabs being converted to 4 spaces as well
 set shiftwidth=4 " sets number of spaces used for each indent
 set smartindent
+set expandtab
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
