@@ -61,6 +61,12 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" There is a query provided here b/c some lsp clients (pyright) requires a query
+nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
+
+" Mappings to jump around
+noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>
+noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
 
 " MISC MAPPINGS TO MAKE LIFE EASIER... most (except really common ones) are prefixed with `m` to set them apart
 " Add command to open previous file
