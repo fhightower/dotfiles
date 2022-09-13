@@ -44,7 +44,7 @@ report.next.labels=ID,Active,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Ur
 report.next.columns=id,start.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 news.version=2.6.0
 urgency.tags.coefficient=0
-urgency.blocking.coefficient=1.0
+urgency.blocking.coefficient=.25
 urgency.annotations.coefficient=0
 urgency.project.coefficient=0
 urgency.scheduled.coefficient=0.5
@@ -57,3 +57,4 @@ report.next.filter=status:pending -WAITING limit:5
 urgency.due.coefficient=3
 # make search case in-sensitive
 search.case.sensitive=0
+color.blocking=black on color8
