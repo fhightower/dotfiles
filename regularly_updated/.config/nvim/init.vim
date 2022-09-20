@@ -87,7 +87,8 @@ function! NumberToggle()
     set nu rnu
   endif
 endfunc
-nnoremap <leader>mn <cmd>:call NumberToggle()<cr>
+# this is noremap so this works in normal and visual modes (and others)
+noremap <leader>mn <cmd>:call NumberToggle()<cr>
 
 augroup CUSTOM_STUFF
 	" Removes all listeners in this group and re-attaches them
