@@ -87,7 +87,7 @@ function! NumberToggle()
     set nu rnu
   endif
 endfunc
-# this is noremap so this works in normal and visual modes (and others)
+" This is noremap so this works in normal and visual modes (and others)
 noremap <leader>mn <cmd>:call NumberToggle()<cr>
 
 augroup CUSTOM_STUFF
