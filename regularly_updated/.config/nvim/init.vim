@@ -43,6 +43,10 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
+" SNIPPETS
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*'}
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 let mapleader = ' '
@@ -67,6 +71,19 @@ nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
 " Mappings to jump around
 noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>
 noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
+
+" <MAPPINGS FOR LUA-SNIP>
+" press <Tab> to expand or jump in a snippet. These can also be mapped separately
+" via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+" -1 for jumping backwards.
+inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+
+snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+
+lua require("luasnip.loaders.from_snipmate").lazy_load()
+" </MAPPINGS FOR LUA-SNIP>
 
 " MISC MAPPINGS TO MAKE LIFE EASIER... most (except really common ones) are prefixed with `m` to set them apart
 " Add command to open previous file
