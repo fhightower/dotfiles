@@ -1,5 +1,7 @@
 toml
 https
+repos
+onboarding
 github
 gohugoio
 Hightower
@@ -42,5 +44,13 @@ postceded
 whitespaces
 unescaped
 www
-repos
-Onboarding
+emacs
+rfcs
+ADR
+adrs
+rollout
+ADRs
+direnv
+eval
+bashrc
+config
