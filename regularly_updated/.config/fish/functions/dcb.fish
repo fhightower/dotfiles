@@ -1,3 +1,3 @@
 function dcb
-  docker-compose build
+  docker compose build
 end

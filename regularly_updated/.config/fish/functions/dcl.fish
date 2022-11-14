@@ -1,3 +1,3 @@
 function dcl
-  docker-compose logs $argv
+  docker compose logs $argv
 end

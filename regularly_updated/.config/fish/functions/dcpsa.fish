@@ -1,3 +1,3 @@
 function dcpsa
-  docker-compose ps -a
+  docker compose ps -a
 end

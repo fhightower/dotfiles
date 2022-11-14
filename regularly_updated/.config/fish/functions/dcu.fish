@@ -1,3 +1,3 @@
 function dcu
-  docker-compose up
+  docker compose up
 end
