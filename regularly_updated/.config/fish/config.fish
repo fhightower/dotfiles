@@ -5,7 +5,7 @@ if status is-interactive
     fish_vi_key_bindings
 end
 
-direnv hook fish | source
+# direnv hook fish | source
 
 set bashrc $HOME/.bashrc
 [ -f "$bashrc" ] && bash "$bashrc"
