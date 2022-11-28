@@ -25,6 +25,9 @@ set spellsuggest=best,7
 " treat components of a camelCasedWord as different words
 set spelloptions=camel
 
+" Allow mouse to copy as expected on mac
+set mouse=r
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/vim-plug'
