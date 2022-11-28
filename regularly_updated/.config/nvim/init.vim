@@ -28,7 +28,7 @@ set spelloptions=camel
 " Allow mouse to copy as expected on mac
 set mouse=r
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/plugins')
 
 Plug 'junegunn/vim-plug'
 Plug 'preservim/nerdtree'
@@ -120,4 +120,5 @@ augroup END
 " import lua files as I port to lua
 lua require'fun'
 lua require'lsp-clients'
+lua require'telescope-config'
 
