@@ -28,6 +28,12 @@ set spelloptions=camel
 " Allow mouse to copy as expected on mac
 set mouse=r
 
+" This reverts odd telescope behaviour as noted here:
+" https://vi.stackexchange.com/questions/39078/wrong-colors-in-of-telescope-window
+" And here:
+" https://github.com/nvim-telescope/telescope.nvim/issues/2145
+hi! link NormalFloat Normal
+
 call plug#begin('~/.config/nvim/plugins')
 
 Plug 'junegunn/vim-plug'
