@@ -11,4 +11,5 @@ cp -r $BASE_CONFIG_PATH/fish/ $REG_UPDATE_PATH/fish
 
 cp ~/.taskrc ./regularly_updated/
 cp ~/.hushlogin ./regularly_updated/
+cp ~/.bashrc ./regularly_updated/
 
