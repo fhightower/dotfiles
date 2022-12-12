@@ -58,3 +58,8 @@ urgency.due.coefficient=3
 # make search case in-sensitive
 search.case.sensitive=0
 color.blocking=black on color8
+report.until.description=Show tasks by ascending \"until\" date
+report.until.sort=until+
+report.until.columns=id,start.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.until.labels=ID,Active,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
+report.until.filter=status:pending -WAITING limit:page
