@@ -63,3 +63,4 @@ report.until.sort=until+
 report.until.columns=id,start.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 report.until.labels=ID,Active,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
 report.until.filter=status:pending -WAITING limit:page
+report.active.sort=urgency-

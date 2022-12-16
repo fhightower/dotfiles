@@ -43,6 +43,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'kperath/dailynotes.nvim'
 
 " REQUIREMENTS FOR NVIM-CMP (see https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
 Plug 'neovim/nvim-lspconfig'
@@ -125,6 +126,7 @@ augroup END
 
 " import lua files as I port to lua
 lua require'fun'
+lua require'general'
 lua require'lsp-clients'
 lua require'telescope-config'
 
