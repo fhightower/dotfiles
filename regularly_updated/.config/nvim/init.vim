@@ -21,7 +21,7 @@ set wildmenu " command-line completion shows a list of matches
 " spell languages
 set spelllang=en_us
 " limit number of spellcheck suggestions shown
-set spellsuggest=best,7
+set spellsuggest=best,3
 " treat components of a camelCasedWord as different words
 set spelloptions=camel
 
