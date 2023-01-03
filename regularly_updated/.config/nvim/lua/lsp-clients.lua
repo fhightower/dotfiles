@@ -56,3 +56,17 @@ require'lspconfig'.html.setup {
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.ember.setup{}
 
+-- lsp configs from https://github.com/hrsh7th/vscode-langservers-extracted
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.eslint.setup {
+  capabilities = capabilities,
+}
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
