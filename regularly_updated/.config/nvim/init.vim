@@ -44,6 +44,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kperath/dailynotes.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " REQUIREMENTS FOR NVIM-CMP (see https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
 Plug 'neovim/nvim-lspconfig'
@@ -81,6 +83,10 @@ nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
 " Mappings to jump around
 noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>
 noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
+" The mappings below provide the same mappings above for go files (which use
+" vim-go)
+autocmd FileType go noremap <leader>jd <Plug>(go-def)
+autocmd FileType go noremap <leader>jr <Plug>(go-referrers)
 
 " <MAPPINGS FOR LUA-SNIP>
 " press <Tab> to expand or jump in a snippet. These can also be mapped separately

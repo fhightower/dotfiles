@@ -69,4 +69,10 @@ require'lspconfig'.eslint.setup {
 require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
+require'lspconfig'.solargraph.setup{
+  capabilities = capabilities,
+}
 
+-- Tell vim-go to use gopls
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
