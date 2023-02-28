@@ -39,9 +39,9 @@ data.location=~/.task
 #include solarized-light-256.theme
 #include no-color.theme
 
-report.next.labels=ID,Active,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
+report.next.labels=ID,Deps,P,Project,Tags,Recur,S,Due,Until,Description,U
 
-report.next.columns=id,start.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.next.columns=id,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
 news.version=2.6.0
 urgency.tags.coefficient=0
 urgency.blocking.coefficient=.25
@@ -64,3 +64,5 @@ report.until.columns=id,start.age,depends,priority,project,tags,recur,scheduled.
 report.until.labels=ID,Active,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
 report.until.filter=status:pending -WAITING limit:page
 report.active.sort=urgency-
+report.active.columns=id,depends.indicator,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.active.labels=ID,D,P,Project,Tags,Recur,Sch,Due,Until,Description,U

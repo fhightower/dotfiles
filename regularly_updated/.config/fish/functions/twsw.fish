@@ -1,3 +1,3 @@
-function twsw --wraps='t "end>$(date -v-7d -I)" completed' --description 'alias twsw=t "end>$(date -v-7d -I)" completed'
-  t "end>$(date -v-7d -I)" completed $argv; 
+function twsw
+  t "end>$(date -v-6d -I'date')" completed $argv;
 end
