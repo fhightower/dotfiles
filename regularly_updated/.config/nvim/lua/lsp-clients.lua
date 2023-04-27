@@ -54,7 +54,6 @@ require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
 require'lspconfig'.pyright.setup{}
-require'lspconfig'.ember.setup{}
 
 -- lsp configs from https://github.com/hrsh7th/vscode-langservers-extracted
 require'lspconfig'.jsonls.setup {
@@ -72,6 +71,10 @@ require'lspconfig'.html.setup {
 require'lspconfig'.solargraph.setup{
   capabilities = capabilities,
 }
+require'lspconfig'.emmet_ls.setup{
+  capabilities = capabilities,
+}
+
 
 -- Tell vim-go to use gopls
 -- let g:go_def_mode='gopls'
