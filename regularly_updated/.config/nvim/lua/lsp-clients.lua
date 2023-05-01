@@ -1,11 +1,12 @@
 -- Setup nvim-cmp.
-local cmp = require'cmp'
+local luasnip = require("luasnip")
+local cmp = require("cmp")
 
 cmp.setup({
     snippet = {
         expand = function(args)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        end,
+            require('luasnip').lsp_expand(args.body)
+        end
     },
     window = {
         -- completion = cmp.config.window.bordered(),
@@ -27,6 +28,7 @@ cmp.setup({
     })
 })
 
+
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
     mapping = cmp.mapping.preset.cmdline(),
@@ -47,13 +49,17 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 -- old and not sure if valid: local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities
+}
 
 -- lsp configs from https://github.com/hrsh7th/vscode-langservers-extracted
 require'lspconfig'.jsonls.setup {
@@ -74,7 +80,6 @@ require'lspconfig'.solargraph.setup{
 require'lspconfig'.emmet_ls.setup{
   capabilities = capabilities,
 }
-
 
 -- Tell vim-go to use gopls
 -- let g:go_def_mode='gopls'
