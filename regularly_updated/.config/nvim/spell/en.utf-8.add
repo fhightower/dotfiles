@@ -82,3 +82,4 @@ Auth
 baseUrl
 npm
 liine
+virtualenv
