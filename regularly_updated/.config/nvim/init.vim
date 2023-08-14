@@ -81,7 +81,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
 
 " Mappings to jump around
-noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>
+noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>zz
 noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
 " The mappings below provide the same mappings above for go files (which use
 " vim-go)
@@ -110,6 +110,27 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <leader>mi gg<cr>=G<cr>``<cr>
 " Toggle spelling
 nnoremap <leader>msp <cmd>:set spell!<cr>
+
+" Exit insert mode when certain chars are repeated
+inoremap jj <ESC>
+inoremap kk <ESC>
+inoremap bb <ESC>
+inoremap ww <ESC>
+
+" Center cursor (zz) when using C-d and C-u and some other commands
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+noremap n nzz
+noremap N Nzz
+
+" Where have you been all my life... paste the item in the default register
+" over the selected text while keeping the pasted item in the default
+" register.
+" It does this by deleting the selected text to the black-hole register ("_)
+" and then pasting the text from the default register so it remains the
+" unchanged.
+xnoremap <leader>p "_dP
+" END MISC MAPPINGS TO MAKE LIFE EASIER
 
 " Add command to turn off line numbering
 " credit: https://stackoverflow.com/questions/32306604/how-to-turn-off-vim-relativenumber-setting
