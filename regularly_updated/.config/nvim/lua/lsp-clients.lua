@@ -29,7 +29,9 @@ cmp.setup({
 })
 
 -- Load snippets from custom locations
-require("luasnip.loaders.from_vscode").lazy_load({ paths = { "../snippets" } })
+-- This path has to be relative to the init.vim
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
+
 -- Load snippets from plugins
 require("luasnip.loaders.from_vscode").lazy_load()
 

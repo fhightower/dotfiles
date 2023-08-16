@@ -58,7 +58,6 @@ Plug 'hrsh7th/nvim-cmp'
 " SNIPPETS
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*'}
 Plug 'saadparwaiz1/cmp_luasnip'
-" Plug 'honza/vim-snippets' " Snippet collection
 Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
