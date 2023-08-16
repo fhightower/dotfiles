@@ -9,8 +9,8 @@ cmp.setup({
         end
     },
     window = {
-        -- completion = cmp.config.window.bordered(),
-        -- documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -28,6 +28,10 @@ cmp.setup({
     })
 })
 
+-- Load snippets from custom locations
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "../snippets" } })
+-- Load snippets from plugins
+require("luasnip.loaders.from_vscode").lazy_load()
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {

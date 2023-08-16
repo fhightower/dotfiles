@@ -57,7 +57,9 @@ Plug 'hrsh7th/nvim-cmp'
 
 " SNIPPETS
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*'}
-Plug 'honza/vim-snippets'
+Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'honza/vim-snippets' " Snippet collection
+Plug 'rafamadriz/friendly-snippets'
 
 call plug#end()
 
@@ -97,8 +99,6 @@ inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
 
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
-
-lua require("luasnip.loaders.from_snipmate").lazy_load()
 " </MAPPINGS FOR LUA-SNIP>
 
 " MISC MAPPINGS TO MAKE LIFE EASIER... most (except really common ones) are prefixed with `m` to set them apart
