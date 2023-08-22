@@ -8,12 +8,12 @@ set expandtab
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=1000
 
 set ignorecase " ignore case when searching...
 set smartcase " ... unless search has upper-case char. in it
 
-set scrolloff=11 " scroll once I am 11 chars. from the end of the file
+set scrolloff=999 " keep the cursor in the middle of the screen (except at beginning and end of files)
 
 set wildmode=list " list command line completion options
 set wildmenu " command-line completion shows a list of matches
@@ -83,7 +83,7 @@ nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
 
 " Mappings to jump around
 noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>zz
-noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
+noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>zz
 " The mappings below provide the same mappings above for go files (which use
 " vim-go)
 autocmd FileType go noremap <leader>jd <Plug>(go-def)
@@ -116,11 +116,19 @@ inoremap kk <ESC>
 inoremap bb <ESC>
 inoremap ww <ESC>
 
+inoremap ( ()<left>
+inoremap { {}<left>
+inoremap [ []<left>
+
 " Center cursor (zz) when using C-d and C-u and some other commands
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
 noremap n nzz
 noremap N Nzz
+noremap G Gzz
+" These aren't necessary b/c scrolloff is so high, but they are nice b/c they keep things centered when navigating near the bottom of a file
+nnoremap k kzz
+nnoremap j jzz
 
 " Where have you been all my life... paste the item in the default register
 " over the selected text while keeping the pasted item in the default
