@@ -80,8 +80,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fl <cmd>Telescope lsp_workspace_symbols query=a<cr>
 
 " Mappings to jump around
-noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>zz
-noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>zz
+noremap <leader>jd <cmd>lua require"telescope.builtin".lsp_definitions()<CR>
+noremap <leader>jr <cmd>lua require"telescope.builtin".lsp_references()<CR>
 " The mappings below provide the same mappings above for go files (which use
 " vim-go)
 autocmd FileType go noremap <leader>jd <Plug>(go-def)
@@ -118,18 +118,6 @@ inoremap ( ()<left>
 inoremap { {}<left>
 inoremap [ []<left>
 
-" Center cursor (zz) when using C-d and C-u and some other commands
-noremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
-noremap n nzz
-noremap N Nzz
-" noremap G Gzz
-" These aren't necessary b/c scrolloff is so high, but they are nice b/c they keep things centered when navigating near the bottom of a file
-" nnoremap k kzz
-" nnoremap j jzz
-" nnoremap w wzz
-" nnoremap b bzz
-
 " Where have you been all my life... paste the item in the default register
 " over the selected text while keeping the pasted item in the default
 " register.
@@ -154,16 +142,15 @@ noremap <leader>mn <cmd>:call NumberToggle()<cr>
 augroup CUSTOM_STUFF
 	" Removes all listeners in this group and re-attaches them
 	autocmd!
+
 	" Remove trailing whitespace
 	autocmd BufWritePre * : execute ':%s/\s\+$//e'
+
+    " Crazy, I know, but I like having the cursor in the middle of the screen as
+    " much as possible
+    autocmd CursorMoved,CursorMovedI * call CenterCursor()
 augroup END
 
-" Crazy, I know, but I like having the cursor in the middle of the screen as
-" much as possible
-augroup CursorMoveEvent
-  autocmd!
-  autocmd CursorMoved,CursorMovedI * call CenterCursor()
-augroup END
 function! CenterCursor()
     let pos = getpos(".")
     normal! zz
