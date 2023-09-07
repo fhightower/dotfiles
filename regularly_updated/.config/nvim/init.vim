@@ -114,10 +114,6 @@ inoremap kk <ESC>
 inoremap bb <ESC>
 inoremap ww <ESC>
 
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
-
 " Where have you been all my life... paste the item in the default register
 " over the selected text while keeping the pasted item in the default
 " register.
@@ -138,6 +134,7 @@ function! NumberToggle()
 endfunc
 " This is noremap so this works in normal and visual modes (and others)
 noremap <leader>mn <cmd>:call NumberToggle()<cr>
+call NumberToggle()
 
 augroup CUSTOM_STUFF
 	" Removes all listeners in this group and re-attaches them
