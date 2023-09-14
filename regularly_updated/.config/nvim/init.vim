@@ -25,6 +25,7 @@ set spelloptions=camel
 
 " Allow mouse to copy as expected on mac
 set mouse=r
+set clipboard+=unnamedplus
 
 call plug#begin('~/.config/nvim/plugins')
 
@@ -36,7 +37,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kperath/dailynotes.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " REQUIREMENTS FOR NVIM-CMP (see https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
