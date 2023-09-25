@@ -1,3 +1,3 @@
 function pva
-  . venv/bin/activate.fish $argv
+  . venv/bin/activate.fish && . .env
 end

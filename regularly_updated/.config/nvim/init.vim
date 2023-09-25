@@ -101,6 +101,8 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <leader>mi gg<cr>=G<cr>``<cr>
 " Toggle spelling
 nnoremap <leader>msp <cmd>:set spell!<cr>
+" Shortcut for saving file
+nnoremap <leader>s <cmd>:w<cr>
 
 " Exit insert mode when certain chars are repeated
 inoremap jj <ESC>
