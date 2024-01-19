@@ -38,6 +38,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kperath/dailynotes.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'christoomey/vim-tmux-navigator'
 
 " REQUIREMENTS FOR NVIM-CMP (see https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
 Plug 'neovim/nvim-lspconfig'
@@ -154,3 +155,4 @@ endfunction
 lua require'fun'
 lua require'general'
 lua require'lsp-clients'
+lua require'lang-specifics'

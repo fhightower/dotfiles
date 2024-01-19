@@ -83,6 +83,16 @@ require'lspconfig'.emmet_ls.setup{
   capabilities = capabilities,
 }
 
+local on_attach_ruff = function(client, bufnr)
+  -- Disable hover in favor of Pyright
+  client.server_capabilities.hoverProvider = false
+end
+
+require('lspconfig').ruff_lsp.setup {
+    on_attach = on_attach_ruff,
+    capabilities = capabilities,
+}
+
 -- Tell vim-go to use gopls
 -- let g:go_def_mode='gopls'
 -- let g:go_info_mode='gopls'
