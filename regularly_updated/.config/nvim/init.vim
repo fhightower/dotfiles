@@ -155,4 +155,4 @@ endfunction
 lua require'fun'
 lua require'general'
 lua require'lsp-clients'
-lua require'lang-specifics'
+lua require'python'

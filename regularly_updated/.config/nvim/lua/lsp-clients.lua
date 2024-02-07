@@ -62,10 +62,6 @@ require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
 
-require'lspconfig'.pyright.setup{
-  capabilities = capabilities
-}
-
 -- lsp configs from https://github.com/hrsh7th/vscode-langservers-extracted
 require'lspconfig'.jsonls.setup {
   capabilities = capabilities,
@@ -91,6 +87,10 @@ end
 require('lspconfig').ruff_lsp.setup {
     on_attach = on_attach_ruff,
     capabilities = capabilities,
+}
+
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities
 }
 
 -- Tell vim-go to use gopls
