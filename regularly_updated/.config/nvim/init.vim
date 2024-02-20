@@ -110,6 +110,8 @@ inoremap jj <ESC>
 inoremap kk <ESC>
 inoremap bb <ESC>
 inoremap ww <ESC>
+" Using three l's b/c two l's can commonly occur in words
+inoremap lll <ESC>
 
 " Where have you been all my life... paste the item in the default register
 " over the selected text while keeping the pasted item in the default

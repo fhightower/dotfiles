@@ -7,6 +7,7 @@ function Format()
     vim.cmd("e")
     vim.cmd("silent! RuffFix")
     vim.cmd("e")
+    vim.api.nvim_feedkeys('zz', 'n', true)
 end
 
 vim.cmd([[command! Format :lua Format()<CR>]])
