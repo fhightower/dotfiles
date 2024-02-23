@@ -10,7 +10,7 @@ function Format()
     vim.api.nvim_feedkeys('zz', 'n', true)
 end
 
-vim.cmd([[command! Format :lua Format()<CR>]])
+vim.cmd([[command! F :lua Format()<CR>]])
 vim.api.nvim_set_keymap('n', '<leader>ml', [[:lua Format()<CR>]], { noremap = true, silent = true })
 
 --[[
