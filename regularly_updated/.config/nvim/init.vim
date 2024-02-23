@@ -39,11 +39,11 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kperath/dailynotes.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'morhetz/gruvbox'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
-
 
 " REQUIREMENTS FOR NVIM-CMP (see https://github.com/hrsh7th/nvim-cmp/#recommended-configuration)
 Plug 'neovim/nvim-lspconfig'
@@ -163,3 +163,6 @@ lua require'fun'
 lua require'general'
 lua require'lsp-clients'
 lua require'python'
+
+" use gruvbox theme
+autocmd vimenter * ++nested colorscheme gruvbox
