@@ -1,0 +1,12 @@
+{
+    "Dict string Any": {
+        "prefix": "tydistan",
+        "body": "dict[str, Any]",
+        "description": ""
+    },
+    "Optional str": {
+        "prefix": "tyoptstr",
+        "body": "Optional[str]",
+        "description": ""
+    }
+}

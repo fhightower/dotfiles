@@ -1,0 +1,7 @@
+{
+    "Pytest Parametrize": {
+        "prefix": "pyteparametrize",
+        "body": "@pytest.mark.parametrize(\n\t'input_,expected_output',\n\t(('i', 'o'),))\ndef test_${1:function_name}${2:extra}(input_, expected_output):\n\tr = ${1:function_name}(input_)\n\tprint(r)\n\tassert r == expected_output",
+        "description": ""
+    }
+}

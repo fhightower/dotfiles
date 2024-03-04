@@ -5,6 +5,7 @@ set REG_UPDATE_PATH ./regularly_updated/.config
 
 cp $BASE_CONFIG_PATH/nvim/init.vim $REG_UPDATE_PATH/nvim/
 cp -r $BASE_CONFIG_PATH/nvim/lua/ $REG_UPDATE_PATH/nvim/lua/
+cp -r $BASE_CONFIG_PATH/nvim/snippets/ $REG_UPDATE_PATH/nvim/snippets/
 cp $BASE_CONFIG_PATH/nvim/spell/en.utf-8.add $REG_UPDATE_PATH/nvim/spell/
 
 cp -r $BASE_CONFIG_PATH/fish/ $REG_UPDATE_PATH/fish

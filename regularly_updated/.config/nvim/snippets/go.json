@@ -1,0 +1,12 @@
+{
+    "prf": {
+        "prefix": "prf",
+        "body": "fmt.Printf(\"${1:str}\", ${2:v})",
+        "description": "fmt.Printf"
+    },
+    "prln": {
+        "prefix": "prln",
+        "body": "fmt.Println(\"${1:str}\")",
+        "description": "fmt.Println"
+    }
+}

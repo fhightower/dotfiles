@@ -1,0 +1,27 @@
+{
+    "forrange": {
+        "prefix": "forrange",
+        "body": "for ${1:value} in range(${2:start}, ${3:end}):\n\t${4:pass}$0",
+        "description": "Code snippet to iterate through a range."
+    },
+    "prf": {
+        "prefix": "prf",
+        "body": "print(f'${1}{${2}}${3}')",
+        "description": "Print format"
+    },
+    "prff": {
+        "prefix": "prfs",
+        "body": "print(f'${1}: {${1}}')",
+        "description": "Print format where items are the same"
+    },
+    "prfd": {
+        "prefix": "prfd",
+        "body": "print(f'${1:name}: {${2:item}}')",
+        "description": "Print format different"
+    },
+    "dictsortvals": {
+        "prefix": "dictsortvals",
+        "body": "${1:dict(}sorted(${2:d}.items(), key=lambda item: item[1])${3:)}",
+        "description": "Sort a dict by values"
+    }
+}
