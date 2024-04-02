@@ -93,6 +93,28 @@ require'lspconfig'.pyright.setup{
   capabilities = capabilities
 }
 
+require'lspconfig'.volar.setup{
+  filetypes = {'javascript', 'vue'},
+  capabilities = capabilities
+}
+
+require'lspconfig'.tsserver.setup{
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+        languages = {"javascript", "typescript", "vue"},
+      },
+    },
+  },
+  filetypes = {
+    "javascript",
+    "typescript",
+    "vue",
+  },
+}
+
 -- Tell vim-go to use gopls
 -- let g:go_def_mode='gopls'
 -- let g:go_info_mode='gopls'
