@@ -115,6 +115,8 @@ require'lspconfig'.tsserver.setup{
   },
 }
 
+require('gitsigns').setup()
+
 -- Tell vim-go to use gopls
 -- let g:go_def_mode='gopls'
 -- let g:go_info_mode='gopls'
