@@ -1,3 +1,3 @@
 function lii
-  cd ~/code/liine
+  cd ~/code/work
 end
