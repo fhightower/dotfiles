@@ -1,0 +1,7 @@
+{
+    "header": {
+        "prefix": "header",
+        "body": "---\ndate: ${1:date}\ntags: [\"${2:tag}\"${3}]\n---\n\n${4}",
+        "description": "Add a header to a markdown file"
+    }
+}

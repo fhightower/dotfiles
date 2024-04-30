@@ -1,3 +1,3 @@
 function lscl
-  ls $argv| wc -l; 
+  ls $argv| wc -l;
 end
