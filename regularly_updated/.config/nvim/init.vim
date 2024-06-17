@@ -39,7 +39,12 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kperath/dailynotes.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'mechatroner/rainbow_csv'
+
+" Theme
 Plug 'morhetz/gruvbox'
+
+" Git
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -117,8 +122,8 @@ inoremap jj <ESC>
 inoremap kk <ESC>
 inoremap bb <ESC>
 inoremap ww <ESC>
-" Using three l's b/c two l's can commonly occur in words
-inoremap lll <ESC>
+inoremap ;; <ESC>
+inoremap hh <ESC>
 
 " Where have you been all my life... paste the item in the default register
 " over the selected text while keeping the pasted item in the default

@@ -19,6 +19,11 @@
         "body": "print(f'${1:name}: {${2:item}}')",
         "description": "Print format different"
     },
+    "todo": {
+        "prefix": "todo",
+        "body": "# TODO: ${1}",
+        "description": "todo"
+    },
     "dictsortvals": {
         "prefix": "dictsortvals",
         "body": "${1:dict(}sorted(${2:d}.items(), key=lambda item: item[1])${3:)}",
