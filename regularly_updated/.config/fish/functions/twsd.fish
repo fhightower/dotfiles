@@ -1,3 +1,3 @@
 function twsd
-  t "end>$(date -I'date')" completed;
+  tw "end>$(date -I'date')" completed;
 end
