@@ -1,4 +1,4 @@
-function twu --description 'Update tasks in git repo'
+function ttu --description 'Update tasks in git repo'
   cd ~/.task/;
   gau;
   gcm "Update tasks";
